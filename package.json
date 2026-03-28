@@ -1,0 +1,17 @@
+{
+  "name": "projet-git",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:commits": "commitlint --from HEAD~10 --to HEAD",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "eslint": "^9.23.0",
+    "husky": "^9.1.7"
+  }
+}
