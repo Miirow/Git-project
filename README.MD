@@ -1,13 +1,19 @@
-# Projet Git
+# Projet NBA en JavaScript
 
-Projet d'apprentissage Git/GitHub avec bonnes pratiques de collaboration :
+Ce projet modélise des objets NBA en JavaScript, avec une structure simple autour de deux classes :
 
-- gestion des issues et des pull requests
-- conventions de commit
-- lint local et en CI
-- templates de contribution
+- `Joueur` : informations d'un joueur (nom, prenom, numero, poste, poids, age, taille)
+- `Equipe` : informations d'une equipe (nom, manager, liste de joueurs)
 
-## Prérequis
+L'objectif est de pratiquer la programmation orientee objet et les bonnes pratiques Git/GitHub.
+
+## Structure du projet
+
+- `nba.js` : classes principales et exemples d'instances
+- `eslint.config.js` : regles de lint
+- `.github/workflows/lint.yml` : verification automatique en CI
+
+## Prerequis
 
 - Node.js 20+
 - npm
@@ -19,39 +25,49 @@ Projet d'apprentissage Git/GitHub avec bonnes pratiques de collaboration :
 npm install
 ```
 
-## Lancer les vérifications
+## Execution
+
+```bash
+node nba.js
+```
+
+## Lint
 
 ```bash
 npm run lint
 ```
 
-## Convention de commits
+## Exemple d'utilisation
 
-Le projet suit Conventional Commits. Exemples valides :
+Le fichier `nba.js` contient un exemple avec :
 
-- `feat: add login form`
-- `fix: handle null response`
-- `docs: update readme`
+- creation d'un joueur (`joueur1`)
+- creation d'une equipe (`equipe1`) contenant une liste de joueurs
 
-Un hook Git `commit-msg` refuse automatiquement les messages invalides.
+## Commits et qualite
 
-## Hooks Git
+Le projet utilise :
 
-Le projet utilise Husky avec deux hooks :
+- Husky pour lancer les hooks Git
+- ESLint avant commit (`pre-commit`)
+- Commitlint pour valider les messages de commit (`commit-msg`)
 
-- `pre-commit` : exécute le lint
-- `commit-msg` : vérifie le message de commit avec commitlint
+Les messages de commit doivent suivre le format Conventional Commits, par exemple :
+
+- `feat: ajoute la classe equipe`
+- `fix: corrige l'attribut joueur`
+- `docs: met a jour le readme`
 
 ## CI GitHub Actions
 
-La CI vérifie :
+La CI verifie automatiquement :
 
 - le lint du code
-- le format des messages de commits
+- le format des messages de commit
 
 ## Contribution
 
-Consulte le guide de contribution dans `.github/CONTRIBUTING.md`.
+Consulte le guide dans `.github/CONTRIBUTING.md`.
 
 ## Code de conduite
 
