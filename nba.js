@@ -17,3 +17,5 @@ class Equipe {
     this.joueur = Array.isArray(joueur) ? [...joueur] : [];
   }
 }
+
+const joueur1 = new Joueur("James", "LeBron", 23, "Ailier", 113, 40);
