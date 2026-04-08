@@ -1,16 +1,22 @@
-const nba = "nba";
-console.log(nba);
-
 class Joueur {
-  constructor(nom, prenom) {
+  constructor(nom, prenom, numero, poste, poids, age, taille) {
     this.nom = nom;
-    this.equipe = prenom;
+    this.prenom = prenom;
+    this.numero = numero;
+    this.poste = poste;
+    this.poids = poids;
+    this.age = age;
+    this.taille = taille;
   }
 }
 
 class Equipe {
-  constructor(nom, manager) {
+  constructor(nom, manager, joueur) {
     this.nom = nom;
     this.manager = manager;
+    this.joueur = Array.isArray(joueur) ? [...joueur] : [];
   }
 }
+
+const joueur1 = new Joueur("James", "LeBron", 23, "Ailier", 113, 40, 206);
+const equipe1 = new Equipe("Lakers", "Dusty Hill", [joueur1]);
