@@ -2,10 +2,11 @@ const nba = "nba";
 console.log(nba);
 
 class Joueur {
-  constructor(nom, prenom, numero) {
+  constructor(nom, prenom, numero, poste) {
     this.nom = nom;
     this.equipe = prenom;
     this.numero = numero;
+    this.poste = poste;
   }
 }
 
