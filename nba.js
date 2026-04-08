@@ -4,7 +4,7 @@ console.log(nba);
 class Joueur {
   constructor(nom, prenom, numero, poste) {
     this.nom = nom;
-    this.equipe = prenom;
+    this.prenom = prenom;
     this.numero = numero;
     this.poste = poste;
   }
