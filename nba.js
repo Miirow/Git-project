@@ -9,8 +9,9 @@ class Joueur {
 }
 
 class Equipe {
-  constructor(nom, manager) {
+  constructor(nom, manager, joueurs) {
     this.nom = nom;
     this.manager = manager;
+    this.joueurs = joueurs;
   }
 }
