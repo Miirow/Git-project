@@ -18,4 +18,5 @@ class Equipe {
   }
 }
 
-const joueur1 = new Joueur("James", "LeBron", 23, "Ailier", 113, 40);
+const joueur1 = new Joueur("James", "LeBron", 23, "Ailier", 113, 40, 206);
+const equipe1 = new Equipe("Lakers", "Dusty Hill", [joueur1]);
