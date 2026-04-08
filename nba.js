@@ -6,3 +6,9 @@ class Joueur {
     this.nom = nom;
   }
 }
+
+class Equipe {
+  constructor(nom) {
+    this.nom = nom;
+  }
+}
