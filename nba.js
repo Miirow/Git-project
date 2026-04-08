@@ -1,10 +1,11 @@
 class Joueur {
-  constructor(nom, prenom, numero, poste, poids) {
+  constructor(nom, prenom, numero, poste, poids, age) {
     this.nom = nom;
     this.prenom = prenom;
     this.numero = numero;
     this.poste = poste;
     this.poids = poids;
+    this.age = age;
   }
 }
 
