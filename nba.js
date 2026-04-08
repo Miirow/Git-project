@@ -10,9 +10,9 @@ class Joueur {
 }
 
 class Equipe {
-  constructor(nom, manager, joueurs) {
+  constructor(nom, manager, joueur) {
     this.nom = nom;
     this.manager = manager;
-    this.joueurs = joueurs;
+    this.joueur = Array.isArray(joueur) ? [...joueur] : [];
   }
 }
